@@ -54,6 +54,7 @@ const initDb = () => {
 };
 
 sequelize.sync({ force: false }).then(() => {
-  initDb();
-  app.listen(PORT, () => console.log("Now listening"));
+  app.listen(PORT, () => {
+    console.log(`Server started @ ${PORT}`);
+  });
 });
