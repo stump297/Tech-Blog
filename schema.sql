@@ -1,5 +1,4 @@
-DROP DATABASE IF EXISTS blog_db;
-CREATE DATABASE blog_db;
+
 
 -- Create the users table
 CREATE TABLE users (
