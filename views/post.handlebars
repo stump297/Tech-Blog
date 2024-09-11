@@ -1,0 +1,25 @@
+{{> header}}
+<main>
+  <article>
+    <h1>{{title}}</h1>
+    <p>{{content}}</p>
+    <p>Posted by {{user.username}}</p>
+  </article>
+  <section class="comments">
+    <h2>Comments</h2>
+    {{#each comments}}
+      <div>
+        <p>{{this.content}}</p>
+        <p>Commented by {{this.user.username}}</p>
+      </div>
+    {{/each}}
+    {{#if logged_in}}
+      <form class="comment-form">
+        <textarea id="comment-content" placeholder="Add a comment" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    {{/if}}
+  </section>
+</main>
+{{> footer}}
+<script src="/js/comment.js"></script>
